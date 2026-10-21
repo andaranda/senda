@@ -4,15 +4,17 @@ A bilingual English/Spanish curated portfolio for writing and translation.
 
 ## Current site
 
-The portfolio is currently a single static page in `index.html`. It includes:
+The portfolio homepage is `index.html`; individual work descriptions use the matching `work.html` viewer with a `?work=` identifier. It includes:
 - A restrained, responsive design
 - English/Spanish toggle for the site text and work descriptions
 - Language-availability labels on individual entries
+- Matching detail pages with a language toggle for titles, descriptions, and status
+- Permanent internal links from the cards to each work entry
 - Selected translations, writing, and longer projects
 - A short bio focused on study and work
 - A link to the continuing Blogger archive
 
-There is no database, framework, or build step. That is intentional at this stage: the site is a curated portfolio, not yet a full publishing platform. The homepage copy is edited directly in `index.html`.
+There is no database, framework, or build step. That is intentional at this stage: the site is a curated portfolio, not yet a full publishing platform. The homepage copy is edited directly in `index.html`; the work-entry descriptions and bilingual variants are currently maintained in `work.html`. The detail pages are project/preview pages, not the full texts of the works yet.
 
 ## Content and Markdown
 
