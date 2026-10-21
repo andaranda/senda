@@ -4,7 +4,7 @@ A bilingual English/Spanish curated portfolio for writing and translation.
 
 ## Current site
 
-The portfolio homepage is `index.html`; individual work descriptions use the matching `work.html` viewer with a `?work=` identifier. It includes:
+The portfolio is a single-page site in `index.html`. Clicking a work title opens its details in a dialog on the same page, similar to the viewer used on the Nancy Nguyen portfolio. It includes:
 - A restrained, responsive design
 - English/Spanish toggle for the site text and work descriptions
 - Language-availability labels on individual entries
@@ -14,7 +14,7 @@ The portfolio homepage is `index.html`; individual work descriptions use the mat
 - A short bio focused on study and work
 - A link to the continuing Blogger archive
 
-There is no database, framework, or build step. That is intentional at this stage: the site is a curated portfolio, not yet a full publishing platform. The homepage copy is edited directly in `index.html`; the work-entry descriptions and bilingual variants are currently maintained in `work.html`. The detail pages are project/preview pages, not the full texts of the works yet.
+There is no database, framework, or build step. That is intentional at this stage: the site is a curated portfolio, not yet a full publishing platform. The homepage copy and card descriptions are edited directly in `index.html`. The dialog currently shows the card description and a link to the Blogger archive; full published texts still need to be imported from the original posts. The Great Learning (Daxue) has been added to the selection.
 
 ## Content and Markdown
 
