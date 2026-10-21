@@ -74,7 +74,7 @@
             <h3 data-en="After Writing a Poem" data-es="Después de escribir un poema">After Writing a Poem</h3>
             <p data-en="A translation and close reading of a short poem by Jia Dao, exploring how a few lines can hold the labor and uncertainty of writing." data-es="Traducción y lectura atenta de un poema breve de Jia Dao, sobre cómo unos pocos versos pueden contener el trabajo y la incertidumbre de escribir.">A translation and close reading of a short poem by Jia Dao, exploring how a few lines can hold the labor and uncertainty of writing.</p>
             <p class="availability" data-en="Spanish" data-es="Español">Spanish</p>
-            <span class="status" data-en="Published on the blog · Revision possible" data-es="Publicado en el blog · Sujeto a revisión">Published on the blog · Sujeto a revisión</span>
+            <span class="status" data-en="Translation · Revision possible" data-es="Traducción · Sujeta a revisión">Translation · Revision possible</span>
           <a class="work-open" href="work.html?work=after-writing-a-poem" data-en="View work ↗" data-es="Ver obra ↗">View work ↗</a></article>
           <article class="work">
             <div class="meta" data-en="Translation · Classical Chinese" data-es="Traducción · Chino clásico">Translation · Classical Chinese</div>
@@ -245,7 +245,7 @@
         const title=card.querySelector('h3'),meta=card.querySelector('.meta'),summary=card.querySelector('p:not(.availability)'),status=card.querySelector('.status'),availability=card.querySelector('.availability');
         const pick=el=>el?(el.dataset[language]||el.textContent):'';
         const titleText=pick(title),collection=card.dataset.collection==='mini-sutras';
-        const titles=collection?miniSutras.filter(item=>item.lang===language).map(item=>item.title):(textGroups[titleText]||textGroups[title.textContent.trim()]||[]);
+        const titles=collection?miniSutras.map(item=>item.title):(textGroups[titleText]||textGroups[title.textContent.trim()]||[]);
         const bodyText=language==='en'?'Loading the original text…':'Cargando el texto original…';
         dialogContent.innerHTML='<p class="eyebrow">'+pick(meta)+'</p><h2 id="dialog-title">'+titleText+'</h2><p class="dialog-summary">'+pick(summary)+'</p><div class="meta"><span class="pill">'+pick(availability)+'</span><span class="pill">'+pick(status)+'</span></div><div class="dialog-body"><p>'+bodyText+'</p></div><a class="dialog-link" href="https://senda-de-palabras.blogspot.com/" target="_blank" rel="noreferrer">'+(language==='en'?'Visit the Senda de Palabras blog ↗':'Visitar el blog Senda de Palabras ↗')+'</a>';
         if(show) dialog.showModal();
