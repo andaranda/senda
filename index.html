@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ee">
+  <meta name="description" content="Senda de Palabras — writing and translation of Buddhist and classical texts, with essays and contemporary literary work.">
+  <title>Senda de Palabras — Writing & Translation</title>
+  <style>
+    :root{--paper:#f5f3ee;--ink:#242520;--muted:#6e7068;--line:#d8d7ce;--accent:#8a4e38;--soft:#eae7de;--serif:Georgia,"Times New Roman",serif;--sans:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration-color:#aaa99e;text-underline-offset:4px}a:hover{color:var(--accent);text-decoration-color:currentColor}
+    .wrap{width:min(1120px,calc(100% - 48px));margin-inline:auto}.topbar{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(245,243,238,.94);backdrop-filter:blur(12px);z-index:10}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-family:var(--serif);font-size:1.28rem;letter-spacing:-.035em;text-decoration:none;white-space:nowrap}.brand small{display:block;font: .63rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:1px}
+    .navright{display:flex;align-items:center;gap:28px}.navlinks{display:flex;align-items:center;gap:22px}.navlinks a{font-size:.83rem;text-decoration:none;color:#55574f}.navlinks a:hover{color:var(--accent)}.lang{border:1px solid var(--line);background:transparent;border-radius:999px;padding:7px 12px;font:inherit;font-size:.78rem;cursor:pointer;color:var(--ink)}.lang:hover{border-color:var(--accent)}
+    .hero{padding:100px 0 90px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(220px,.65fr);gap:9%;align-items:end;border-bottom:1px solid var(--line)}.eyebrow{font-size:.72rem;letter-spacing:.17em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 24px}.hero h1{font:400 clamp(3.6rem,8vw,7rem)/.98 var(--serif);letter-spacing:-.065em;margin:0;max-width:800px}.hero h1 em{font-weight:400;color:var(--accent)}.hero .intro{font:1.15rem/1.65 var(--serif);color:#4c4e47;margin:30px 0 0;max-width:660px}.hero-side{padding:0 0 7px;border-left:1px solid var(--line);padding-left:26px}.hero-side p{font-size:.92rem;color:var(--muted);margin:0 0 18px}.text-link{font-size:.84rem;font-weight:600;text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:4px;color:var(--accent)}
+    section{padding:76px 0;border-bottom:1px solid var(--line)}.section-head{display:grid;grid-template-columns:200px 1fr;gap:40px;margin-bottom:34px}.section-kicker{font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);padding-top:8px}.section-head h2{font:400 clamp(2rem,4vw,3.4rem)/1.08 var(--serif);letter-spacing:-.045em;margin:0;max-width:740px}.section-head p{color:var(--muted);max-width:620px;margin:16px 0 0}
+    .work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}.work{min-height:230px;padding:27px 28px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;align-items:flex-start}.work .meta{font-size:.69rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:22px}.work h3{font:400 1.7rem/1.15 var(--serif);letter-spacing:-.025em;margin:0 0 12px}.work p{font-size:.91rem;color:var(--muted);margin:0 0 20px;max-width:520px}.status{font-size:.7rem;color:#64665e;border:1px solid var(--line);border-radius:999px;padding:4px 9px;margin-top:auto}
+    .projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.project{background:var(--soft);padding:24px;min-height:220px;display:flex;flex-direction:column}.project h3{font:400 1.55rem/1.2 var(--serif);margin:0 0 12px}.project p{font-size:.88rem;color:#5f6058;margin:0 0 22px}.project .status{align-self:flex-start;margin-top:auto;border-color:#d2cfc4}
+    .about-grid{display:grid;grid-template-columns:200px 1fr;gap:40px}.about-copy{max-width:720px}.about-copy p{font:1.15rem/1.75 var(--serif);margin:0 0 18px}.about-copy .smallcopy{font: .92rem/1.7 var(--sans);color:var(--muted)}
+    .footer{padding:32px 0 42px;display:flex;justify-content:space-between;gap:24px;color:var(--muted);font-size:.78rem}.footer a{text-decoration:none}
+    [hidden]{display:none!important}
+    @media(max-width:800px){.nav{align-items:flex-start;padding:16px 0}.navright{gap:14px}.navlinks{gap:13px;flex-wrap:wrap;justify-content:flex-end}.hero{padding:74px 0 64px;grid-template-columns:1fr;gap:35px}.hero-side{max-width:520px}.section-head,.about-grid{grid-template-columns:1fr;gap:12px}.section-head{margin-bottom:25px}.projects{grid-template-columns:1fr}.project{min-height:0}.work{min-height:220px}}
+    @media(max-width:540px){.wrap{width:min(100% - 32px,1120px)}.nav{flex-wrap:wrap;gap:12px}.brand{font-size:1.15rem}.navright{width:100%;justify-content:space-between;align-items:center}.navlinks{gap:14px}.navlinks a{font-size:.77rem}.hero{padding:58px 0 52px}.hero h1{font-size:clamp(3.25rem,17vw,5.2rem)}.hero .intro{font-size:1.05rem}.work-grid{grid-template-columns:1fr}.work{min-height:0;padding:24px}.work .meta{margin-bottom:15px}section{padding:56px 0}.footer{flex-direction:column;gap:8px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#home">Senda de Palabras<small data-en="Writing · Translation · Texts" data-es="Escritura · Traducción · Textos">Writing · Translation · Texts</small></a>
+      <div class="navright">
+        <nav class="navlinks" aria-label="Main navigation">
+          <a href="#translations" data-en="Translations" data-es="Traducciones">Translations</a>
+          <a href="#writing" data-en="Writing" data-es="Escritura">Writing</a>
+          <a href="#projects" data-en="Projects" data-es="Proyectos">Projects</a>
+          <a href="#about" data-en="About" data-es="Acerca de">About</a>
+        </nav>
+        <button class="lang" id="language-toggle" type="button" aria-label="Cambiar idioma">ES</button>
+      </div>
+    </div>
+  </header>
+  <main id="home">
+    <div class="wrap">
+      <section class="hero" style="border-bottom:1px solid var(--line)">
+        <div>
+          <p class="eyebrow" data-en="A writing and translation portfolio" data-es="Portafolio de escritura y traducción">A writing and translation portfolio</p>
+          <h1 data-en="Words that keep <em>wisdom alive.</em>" data-es="Palabras que mantienen viva la <em>sabiduría.</em>">Words that keep <em>wisdom alive.</em></h1>
+          <p class="intro" data-en="Senda de Palabras brings together translations of Buddhist and classical texts, essays, poetry, and contemporary writing. It is a practice of reading old words closely and finding ways for them to speak in the present." data-es="Senda de Palabras reúne traducciones de textos budistas y clásicos, ensayos, poesía y escritura contemporánea. Es una práctica de leer con atención las palabras antiguas y encontrar maneras de que sigan hablando en el presente.">Senda de Palabras brings together translations of Buddhist and classical texts, essays, poetry, and contemporary writing. It is a practice of reading old words closely and finding ways for them to speak in the present.</p>
+        </div>
+        <aside class="hero-side">
+          <p data-en="A portfolio by a translator and writer working across Buddhist literature, classical texts, and contemporary forms." data-es="Un portafolio de traducción y escritura dedicado a la literatura budista, los textos clásicos y las formas contemporáneas.">A portfolio by a translator and writer working across Buddhist literature, classical texts, and contemporary forms.</p>
+          <a class="text-link" href="#selected" data-en="Explore selected work ↘" data-es="Explorar obras seleccionadas ↘">Explore selected work ↘</a>
+        </aside>
+      </section>
+
+      <section id="selected">
+        <div class="section-head">
+          <div class="section-kicker" data-en="01 / Selected work" data-es="01 / Obras seleccionadas">01 / Selected work</div>
+          <div><h2 data-en="Texts, translations, and ways of reading." data-es="Textos, traducciones y maneras de leer.">Texts, translations, and ways of reading.</h2>
+          <p data-en="A selection across translation, reflection, and literary practice. Each work is presented with its context and status." data-es="Una selección de traducción, reflexión y práctica literaria. Cada obra se presenta con su contexto y estado de elaboración.">A selection across translation, reflection, and literary practice. Each work is presented with its context and status.</p></div>
+        </div>
+        <div class="work-grid">
+          <article class="work" id="translations">
+            <div class="meta" data-en="Translation · Buddhist text" data-es="Traducción · Texto budista">Translation · Buddhist text</div>
+            <h3 data-en="The Diamond Sutra" data-es="El Sutra del Diamante">The Diamond Sutra</h3>
+            <p data-en="A Spanish translation based on the Chinese text associated with Kumārajīva, attentive to the sutra’s direct language and productive ambiguities." data-es="Una traducción al español basada en el texto chino asociado con Kumārajīva, atenta al lenguaje directo del sutra y a sus ambigüedades fecundas.">A Spanish translation based on the Chinese text associated with Kumārajīva, attentive to the sutra’s direct language and productive ambiguities.</p>
+            <span class="status" data-en="Book project · Editorial work ongoing" data-es="Proyecto de libro · En revisión editorial">Book project · Editorial work ongoing</span>
+          </article>
+          <article class="work">
+            <div class="meta" data-en="Translation · Classical Chinese" data-es="Traducción · Chino clásico">Translation · Classical Chinese</div>
+            <h3 data-en="After Writing a Poem" data-es="Después de escribir un poema">After Writing a Poem</h3>
+            <p data-en="A translation and close reading of a short poem by Jia Dao, exploring how a few lines can hold the labor and uncertainty of writing." data-es="Traducción y lectura atenta de un poema breve de Jia Dao, sobre cómo unos pocos versos pueden contener el trabajo y la incertidumbre de escribir.">A translation and close reading of a short poem by Jia Dao, exploring how a few lines can hold the labor and uncertainty of writing.</p>
+            <span class="status" data-en="Published on the blog · Revision possible" data-es="Publicado en el blog · Sujeto a revisión">Published on the blog · Revision possible</span>
+          </article>
+          <article class="work">
+            <div class="meta" data-en="Translation studies · Essay" data-es="Estudios de traducción · Ensayo">Translation studies · Essay</div>
+            <h3>Pattern, not Rhyme</h3>
+            <p data-en="A reflection on the choices involved in translating poetic form, sound, and meaning across languages." data-es="Una reflexión sobre las decisiones que implica traducir la forma poética, el sonido y el sentido entre lenguas.">A reflection on the choices involved in translating poetic form, sound, and meaning across languages.</p>
+            <span class="status" data-en="Published on the blog" data-es="Publicado en el blog">Published on the blog</span>
+          </article>
+          <article class="work">
+            <div class="meta" data-en="Essay · Buddhist thought" data-es="Ensayo · Pensamiento budista">Essay · Buddhist thought</div>
+            <h3 data-en="What Is Dharma?" data-es="¿Qué es Dharma?">What Is Dharma?</h3>
+            <p data-en="A bilingual introduction to a word whose meanings shift across Buddhist teaching, practice, and ordinary use." data-es="Una introducción bilingüe a una palabra cuyos sentidos cambian entre las enseñanzas budistas, la práctica y el uso cotidiano.">A bilingual introduction to a word whose meanings shift across Buddhist teaching, practice, and ordinary use.</p>
+            <span class="status" data-en="Bilingual versions available" data-es="Versiones bilingües disponibles">Bilingual versions available</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="writing">
+        <div class="section-head">
+          <div class="section-kicker" data-en="02 / Writing" data-es="02 / Escritura">02 / Writing</div>
+          <div><h2 data-en="Reflection, experiment, and story." data-es="Reflexión, experimento y relato.">Reflection, experiment, and story.</h2>
+          <p data-en="Alongside translation, this work explores how inherited ideas meet contemporary life through essays, poetry, and imaginative writing." data-es="Junto a la traducción, estos textos exploran cómo las ideas heredadas se encuentran con la vida contemporánea mediante ensayos, poesía y escritura imaginativa.">Alongside translation, this work explores how inherited ideas meet contemporary life through essays, poetry, and imaginative writing.</p></div>
+        </div>
+        <div class="work-grid">
+          <article class="work">
+            <div class="meta" data-en="Contemplative writing · Book project" data-es="Escritura contemplativa · Proyecto de libro">Contemplative writing · Book project</div>
+            <h3>No Mountain</h3>
+            <p data-en="A poetic reimagining of the Ten Oxherding Pictures through the imagery and discipline of mountain climbing." data-es="Una recreación poética de las Diez imágenes del pastoreo del buey mediante las imágenes y la disciplina del alpinismo.">A poetic reimagining of the Ten Oxherding Pictures through the imagery and discipline of mountain climbing.</p>
+            <span class="status" data-en="Book project" data-es="Proyecto de libro">Book project</span>
+          </article>
+          <article class="work">
+            <div class="meta" data-en="Contemporary Buddhist-inspired writing" data-es="Escritura contemporánea inspirada en el budismo">Contemporary Buddhist-inspired writing</div>
+            <h3 data-en="The Coffee Cup Sutra" data-es="El Sutra de la Taza de Café">The Coffee Cup Sutra</h3>
+            <p data-en="An original, playful text that brings Buddhist language into everyday life. Presented as contemporary creative writing, not as a historical or canonical sutra." data-es="Un texto original y lúdico que lleva el lenguaje budista a la vida cotidiana. Se presenta como escritura creativa contemporánea, no como sutra histórico o canónico.">An original, playful text that brings Buddhist language into everyday life. Presented as contemporary creative writing, not as a historical or canonical sutra.</p>
+            <span class="status" data-en="Original literary work" data-es="Obra literaria original">Original literary work</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="section-head">
+          <div class="section-kicker" data-en="03 / Longer projects" data-es="03 / Proyectos extensos">03 / Longer projects</div>
+          <div><h2 data-en="Work in progress." data-es="Obras en desarrollo.">Work in progress.</h2>
+          <p data-en="Some projects take the form of books, sustained translation work, or experiments that need room to develop before they are ready to be shared in full." data-es="Algunos proyectos toman la forma de libros, trabajos de traducción prolongados o experimentos que necesitan espacio para desarrollarse antes de compartirse íntegramente.">Some projects take the form of books, sustained translation work, or experiments that need room to develop before they are ready to be shared in full.</p></div>
+        </div>
+        <div class="projects">
+          <article class="project"><h3 data-en="Sutras for Modern Reading" data-es="Sutras para la lectura moderna">Sutras for Modern Reading</h3><p data-en="A collection pairing accessible abridgments with fuller versions of Buddhist discourses, with attention to sources and editorial choices." data-es="Una colección que combina versiones abreviadas y accesibles con versiones más completas de discursos budistas, atendiendo a las fuentes y decisiones editoriales.">A collection pairing accessible abridgments with fuller versions of Buddhist discourses, with attention to sources and editorial choices.</p><span class="status" data-en="Book project" data-es="Proyecto de libro">Book project</span></article>
+          <article class="project"><h3 data-en="Huineng Commentary" data-es="Comentario de Huineng">Huineng Commentary</h3><p data-en="A Spanish translation project engaging with the Chinese commentary tradition surrounding the Diamond Sutra." data-es="Proyecto de traducción al español que trabaja con la tradición china de comentarios al Sutra del Diamante.">A Spanish translation project engaging with the Chinese commentary tradition surrounding the Diamond Sutra.</p><span class="status" data-en="In progress" data-es="En desarrollo">In progress</span></article>
+          <article class="project"><h3 data-en="Devenir" data-es="Devenir">Devenir</h3><p data-en="A Buddhist-inspired story shaped by the Mesoamerican path of the dead, memory, and the difficult crossing toward another shore." data-es="Un relato inspirado en el budismo y el camino mesoamericano de los muertos, la memoria y el difícil cruce hacia otra orilla.">A Buddhist-inspired story shaped by the Mesoamerican path of the dead, memory, and the difficult crossing toward another shore.</p><span class="status" data-en="Fiction project" data-es="Proyecto narrativo">Fiction project</span></article>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="about-grid">
+          <div class="section-kicker" data-en="04 / About" data-es="04 / Acerca de">04 / About</div>
+          <div class="about-copy">
+            <h2 style="font:400 clamp(2rem,4vw,3.4rem)/1.08 var(--serif);letter-spacing:-.045em;margin:0 0 24px" data-en="Reading across languages and traditions." data-es="Leer entre lenguas y tradiciones.">Reading across languages and traditions.</h2>
+            <p data-en="Senda de Palabras is the working portfolio of a translator and writer engaged with Buddhist texts, classical Chinese literature, and contemporary literary forms. The work moves between close reading, translation, reflection, and creative experiment." data-es="Senda de Palabras es el portafolio de trabajo de un traductor y escritor dedicado a los textos budistas, la literatura china clásica y las formas literarias contemporáneas. El trabajo transita entre la lectura atenta, la traducción, la reflexión y la experimentación creativa.">Senda de Palabras is the working portfolio of a translator and writer engaged with Buddhist texts, classical Chinese literature, and contemporary literary forms. The work moves between close reading, translation, reflection, and creative experiment.</p>
+            <p data-en="The project begins from a simple conviction: texts remain alive not only by being preserved, but by being read carefully and brought into conversation with the present." data-es="El proyecto parte de una convicción sencilla: los textos permanecen vivos no solo al conservarse, sino también al leerse con atención y ponerse en diálogo con el presente.">The project begins from a simple conviction: texts remain alive not only by being preserved, but by being read carefully and brought into conversation with the present.</p>
+            <p class="smallcopy" data-en="This site is a selected portfolio, not a complete archive. Work in progress is labeled as such; translations and adaptations are distinguished from original writing, and source information will be provided where relevant." data-es="Este sitio es una selección de trabajos, no un archivo completo. Los proyectos en desarrollo se identifican como tales; las traducciones y adaptaciones se distinguen de la escritura original, y se ofrecerá información sobre las fuentes cuando corresponda.">This site is a selected portfolio, not a complete archive. Work in progress is labeled as such; translations and adaptations are distinguished from original writing, and source information will be provided where relevant.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="wrap footer">
+    <span>© <span id="year">2026</span> Senda de Palabras</span>
+    <span data-en="Writing and translation · English / Español" data-es="Escritura y traducción · English / Español">Writing and translation · English / Español</span>
+    <a href="https://senda-de-palabras.blogspot.com/" target="_blank" rel="noreferrer" data-en="Earlier writing on Blogger ↗" data-es="Textos anteriores en Blogger ↗">Earlier writing on Blogger ↗</a>
+  </footer>
+  <script>
+    (() => {
+      const button = document.getElementById('language-toggle');
+      let language = 'en';
+      const updateLanguage = (next) => {
+        language = next;
+        document.documentElement.lang = language;
+        document.querySelectorAll('[data-en][data-es]').forEach((node) => {
+          const value = node.dataset[language];
+          if (value !== undefined) node.innerHTML = value;
+        });
+        button.textContent = language === 'en' ? 'ES' : 'EN';
+        button.setAttribute('aria-label', language === 'en' ? 'Switch to Spanish' : 'Cambiar a inglés');
+      };
+      button.addEventListener('click', () => updateLanguage(language === 'en' ? 'es' : 'en'));
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
