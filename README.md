@@ -8,13 +8,13 @@ The portfolio is a single-page site in `index.html`. Clicking a work title opens
 - A restrained, responsive design
 - English/Spanish toggle for the site text and work descriptions
 - Language-availability labels on individual entries
-- Matching detail pages with a language toggle for titles, descriptions, and status
-- Permanent internal links from the cards to each work entry
+- Same-page dialogs for individual works and project descriptions
+- Published post text loaded into the dialog from the public Blogger feed, with a link back to each original post
 - Selected translations, writing, and longer projects
 - A short bio focused on study and work
 - A link to the continuing Blogger archive
 
-There is no database, framework, or build step. That is intentional at this stage: the site is a curated portfolio, not yet a full publishing platform. The homepage copy and card descriptions are edited directly in `index.html`. The dialog currently shows the card description and a link to the Blogger archive; full published texts still need to be imported from the original posts. The Great Learning (Daxue) has been added to the selection.
+There is no database, framework, or build step. That is intentional at this stage: the site is a curated portfolio, not yet a full publishing platform. The homepage copy and card descriptions are edited directly in `index.html`. The dialog loads selected published posts from the public Blogger feed when opened. This requires an internet connection and the Blogger feed to remain publicly accessible. The mini-sutras are grouped as one collection, with the available Spanish and English texts shown together. The Great Learning (Daxue) and the separate essay “Translating the Daxue” are distinct entries. Status tags describe the kind of work rather than saying “Published.”
 
 ## Content and Markdown
 
