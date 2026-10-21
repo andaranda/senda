@@ -79,9 +79,16 @@
           <article class="work">
             <div class="meta" data-en="Translation · Classical Chinese" data-es="Traducción · Chino clásico">Translation · Classical Chinese</div>
             <h3 data-en="The Great Learning (Daxue)" data-es="El Gran Saber (Daxue)">The Great Learning (Daxue)</h3>
-            <p data-en="A translation and study of the Confucian classic 大學, alongside reflections on the work of translating it." data-es="Una traducción y estudio del clásico confuciano 大學, junto con reflexiones sobre el trabajo de traducirlo.">A translation and study of the Confucian classic 大學, alongside reflections on the work of translating it.</p>
-            <p class="availability" data-en="English · Spanish" data-es="Inglés · Español">English · Spanish</p>
-            <span class="status" data-en="Published translation and essay" data-es="Traducción y ensayo publicados">Published translation and essay</span>
+            <p data-en="An English translation and study of the Confucian classic 大學, published alongside a separate essay on the process of translation." data-es="Una traducción al inglés y estudio del clásico confuciano 大學, publicado junto con un ensayo independiente sobre el proceso de traducción.">An English translation and study of the Confucian classic 大學, published alongside a separate essay on the process of translation.</p>
+            <p class="availability" data-en="English" data-es="Inglés">English</p>
+            <span class="status" data-en="Published translation" data-es="Traducción publicada">Published translation</span>
+          </article>
+          <article class="work">
+            <div class="meta" data-en="Translation studies · Essay" data-es="Estudios de traducción · Ensayo">Translation studies · Essay</div>
+            <h3 data-en="Translating the Daxue" data-es="Traducir el Daxue">Translating the Daxue</h3>
+            <p data-en="An essay on translating a classical Chinese text, developed from work in the DRBU Translation Certificate Program and presented at the Spring 2026 Student Symposium." data-es="Un ensayo sobre la traducción de un texto chino clásico, desarrollado a partir del trabajo en el programa de certificado de traducción de DRBU y presentado en el simposio estudiantil de primavera de 2026.">An essay on translating a classical Chinese text, developed from work in the DRBU Translation Certificate Program and presented at the Spring 2026 Student Symposium.</p>
+            <p class="availability" data-en="English" data-es="Inglés">English</p>
+            <span class="status" data-en="Published essay" data-es="Ensayo publicado">Published essay</span>
           </article>
           <article class="work">
             <div class="meta" data-en="Translation studies · Essay" data-es="Estudios de traducción · Ensayo">Translation studies · Essay</div>
@@ -189,7 +196,29 @@
         const status = card.querySelector('.status');
         const availability = card.querySelector('.availability');
         const pick = (el) => el ? (el.dataset[language] || el.textContent) : '';
-        dialogContent.innerHTML = '<p class="eyebrow">'+pick(meta)+'</p><h2 id="dialog-title">'+pick(title)+'</h2><p class="dialog-summary">'+pick(summary)+'</p><div class="meta"><span class="pill">'+pick(availability)+'</span><span class="pill">'+pick(status)+'</span></div><p>'+(language === 'en' ? 'This work is part of the Senda de Palabras portfolio. The full text will appear here when it has been transferred from the original publication and checked.' : 'Esta obra forma parte del portafolio Senda de Palabras. El texto completo aparecerá aquí cuando se haya trasladado de la publicación original y revisado.')+'</p><a class="dialog-link" href="https://senda-de-palabras.blogspot.com/" target="_blank" rel="noreferrer">'+(language === 'en' ? 'Visit the Senda de Palabras blog ↗' : 'Visitar el blog Senda de Palabras ↗')+'</a>';
+        const titleText = pick(title);
+        const blogQueries = {
+          'The Diamond Sutra': 'El Sutra del Diamante',
+          'El Sutra del Diamante': 'El Sutra del Diamante',
+          'After Writing a Poem': 'Después de escribir un poema',
+          'Después de escribir un poema': 'Después de escribir un poema',
+          'The Great Learning (Daxue)': 'The Great Learning Daxue',
+          'El Gran Saber (Daxue)': 'The Great Learning Daxue',
+          'Translating the Daxue': 'Translating the Daxue',
+          'Traducir el Daxue': 'Translating the Daxue',
+          'Pattern, not Rhyme': 'Pattern not Rhyme',
+          'What Is Dharma?': 'What is dharma',
+          '¿Qué es Dharma?': 'Qué es Dharma',
+          'The Coffee Cup Sutra': 'The Sutra of the Coffee Cup',
+          'El Sutra de la Taza de Café': 'El Sutra de la Taza de Café'
+        };
+        const query = blogQueries[titleText];
+        const blogUrl = query ? 'https://senda-de-palabras.blogspot.com/search?q='+encodeURIComponent(query) : 'https://senda-de-palabras.blogspot.com/';
+        const published = /published|publicad|publicado|publicada/i.test(pick(status));
+        const bodyText = published
+          ? (language === 'en' ? 'This work has been published on the Senda de Palabras blog. Use the link below to read the original text.' : 'Esta obra se ha publicado en el blog Senda de Palabras. Usa el enlace siguiente para leer el texto original.')
+          : (language === 'en' ? 'This entry describes a work or project in the portfolio. The full text is not included here.' : 'Esta entrada describe una obra o proyecto del portafolio. El texto completo no está incluido aquí.');
+        dialogContent.innerHTML = '<p class="eyebrow">'+pick(meta)+'</p><h2 id="dialog-title">'+titleText+'</h2><p class="dialog-summary">'+pick(summary)+'</p><div class="meta"><span class="pill">'+pick(availability)+'</span><span class="pill">'+pick(status)+'</span></div><p>'+bodyText+'</p><a class="dialog-link" href="'+blogUrl+'" target="_blank" rel="noreferrer">'+(published ? (language === 'en' ? 'Read the published text ↗' : 'Leer el texto publicado ↗') : (language === 'en' ? 'Visit the Senda de Palabras blog ↗' : 'Visitar el blog Senda de Palabras ↗'))+'</a>';
         if (show) dialog.showModal();
       }
       document.querySelectorAll('.work h3, .project h3').forEach((title) => {
