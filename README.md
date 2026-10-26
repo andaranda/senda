@@ -1,5 +1,7 @@
 # Senda de Palabras
 
+[![OpenRepos](https://img.shields.io/endpoint?url=https://openrepos.org/status/vayu.openrepos.org.json&style=flat-square)](https://vayu.openrepos.org/)
+
 A bilingual English/Spanish portfolio of selected writing, translation, and longer literary projects.
 
 **Live portfolio:** https://andaranda.github.io/senda/  
