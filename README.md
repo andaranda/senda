@@ -1,46 +1,61 @@
 # Senda de Palabras
 
-A bilingual English/Spanish curated portfolio for writing and translation.
+A bilingual English/Spanish portfolio of selected writing, translation, and longer literary projects.
 
-## Current site
+**Live portfolio:** https://andaranda.github.io/senda/  
+**Blogger archive:** https://senda-de-palabras.blogspot.com/
 
-The portfolio is a single-page site in `index.html`. Clicking a work title opens its details in a dialog on the same page, similar to the viewer used on the Nancy Nguyen portfolio. It includes:
-- A restrained, responsive design
-- English/Spanish toggle for the site text and work descriptions
-- Language-availability labels on individual entries
-- Same-page dialogs for individual works and project descriptions
-- Published post text loaded into the dialog from the public Blogger feed, with a link back to each original post
-- Selected translations, writing, and longer projects
-- A short bio focused on study and work
-- A link to the continuing Blogger archive
+## How the site works
 
-There is no database, framework, or build step. That is intentional at this stage: the site is a curated portfolio, not yet a full publishing platform. The homepage copy and card descriptions are edited directly in `index.html`. The dialog loads selected published posts from the public Blogger feed when opened. This requires an internet connection and the Blogger feed to remain publicly accessible. The mini-sutras are grouped as one collection, with the available Spanish and English texts shown together. The Great Learning (Daxue) and the separate essay “Translating the Daxue” are distinct entries. Status tags describe the kind of work rather than saying “Published.”
+This is a lightweight static website built with HTML, CSS, and vanilla JavaScript. It has no framework, package manager, database, or build step.
 
-## Content and Markdown
+- `index.html` is the main portfolio, with sections for selected work, writing, longer projects, and a short biography.
+- `work.html` provides dedicated work pages, selected by a query parameter (for example, `work.html?work=diamond-sutra`).
+- The English/Spanish toggle switches the site's bilingual interface and available descriptions.
+- Most work titles open an in-page dialog. Some dialogs show a project description; others load selected published texts from the public Blogger feed.
+- “Dharma of Ordinary Things” is a curated collection. The exact Blogger post titles included in it are listed in the `miniSutras` array in `index.html`.
+- “No Mountain” has a dedicated description and links to its English and Spanish editions on Amazon. Its cover images are referenced at `images/books/no-mountain-en.png` and `images/books/no-mountain-es.png`.
 
-Markdown is a good format for individual essays, translations, and longer texts when we are ready to publish those works as their own pages. A static-site generator is not necessary for the current portfolio page, but it becomes useful if Markdown files are to be the single source of truth and automatically generate work pages and archive listings. We can add that when the portfolio needs it rather than adding infrastructure prematurely.
+The portfolio is intentionally selective rather than a complete archive. Work status and language availability are stated on the page. The Blogger site remains the chronological archive for earlier posts.
 
-For now, the Blogger site remains the older, chronological archive:
-https://senda-de-palabras.blogspot.com/
+## Files and content
+
+- `index.html` — homepage, styles, language toggle, portfolio dialogs, and Blogger-feed integration.
+- `work.html` — individual work pages.
+- `images/` — local images used by the site, including book covers when added.
+- `README.md` — project notes and publishing instructions.
+
+Homepage copy, card descriptions, project statuses, and the mini-sutra selection are currently maintained directly in the HTML/JavaScript. Blog-based text is retrieved at runtime from Blogger, so those dialogs need an internet connection and the public Blogger feed to remain available. If the feed cannot be reached, the site shows a fallback message and links visitors to the blog.
+
+## Adding book covers or other images
+
+Keep image files in the repository and reference them with relative paths so they work on GitHub Pages. The No Mountain cover paths currently expected by `index.html` are:
+
+- `images/books/no-mountain-en.png`
+- `images/books/no-mountain-es.png`
+
+Git does not track empty folders, so create the `images/books/` path when uploading the first image. Keep the filenames and letter case exactly as written in the HTML.
 
 ## Preview locally
 
-Open `index.html` directly in a browser, or use VS Code's Live Server extension.
+Open `index.html` in a browser, or run the project with VS Code's Live Server extension. Some content in dialogs is loaded from Blogger, so test those features with an internet connection.
 
 ## Publish with GitHub Pages
 
-1. Open the repository's **Settings**.
-2. Choose **Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select `main` and the `/(root)` folder, then save.
+The site is intended to publish from the repository's `main` branch and the root folder:
 
-GitHub Pages has not yet been enabled or verified.
+1. Open the repository on GitHub and go to **Settings**.
+2. Open **Pages**.
+3. Under **Build and deployment**, select **Deploy from a branch**.
+4. Select branch `main` and folder `/(root)`, then save.
 
-## Before launch
+After publishing, check the Pages URL, the English/Spanish toggle, work dialogs, dedicated work pages, Blogger-loaded texts, and images on both desktop and mobile. If the site is already live, GitHub Pages normally deploys updates after changes are committed to the publishing branch.
 
-- Review every description for accuracy and natural voice.
-- Confirm each item's language-availability label.
-- Decide whether to add a public contact address.
-- Review the bio and how much personal Buddhist affiliation to disclose.
-- Check mobile layout and the language toggle.
-- Confirm the site is deployed before sharing the URL.
+## Maintenance checklist
+
+- Keep the portfolio selective; the Blogger archive is the home for the chronological collection of older posts.
+- Check language labels and project statuses when adding or revising work.
+- When adding a Blogger post to “Dharma of Ordinary Things,” use its exact published title in the `miniSutras` array.
+- Test the language toggle and dialog behavior after editing `index.html`.
+- Confirm all referenced images exist in the repository and use the correct path and capitalization.
+- Review links and test the layout at mobile widths before sharing significant updates.
