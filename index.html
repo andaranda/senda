@@ -182,7 +182,12 @@
       const button = document.getElementById('language-toggle');
       const dialog = document.getElementById('work-dialog');
       const dialogContent = document.getElementById('dialog-content');
-      let language = 'en';
+      const preferredLanguage = () => {
+        const languages = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'])
+          .map(value => value.toLowerCase());
+        return languages.some(value => value === 'es' || value.startsWith('es-')) ? 'es' : 'en';
+      };
+      let language = preferredLanguage();
       let activeCard = null;
       const updateLanguage = (next) => {
         language = next;
@@ -283,6 +288,7 @@
         if(!titles.length){body.innerHTML='<p>'+(language==='en'?'This is a project description; the manuscript is not included here.':'Esta es la descripción de un proyecto; el manuscrito no está incluido aquí.')+'</p>';return;}
         loadBlogFeed().then(entries=>{if(!dialog.open||activeCard!==card)return;body.innerHTML=renderSourceText(entries,titles,language,collection);}).catch(()=>{if(!dialog.open||activeCard!==card)return;body.innerHTML='<p>'+(language==='en'?'The text could not be loaded from the blog right now.':'No se pudo cargar el texto del blog en este momento.')+'</p>';});
       }
+      updateLanguage(language);
       document.querySelectorAll('.work h3, .project h3').forEach((title) => {
         title.tabIndex = 0;
         title.setAttribute('role', 'button');
