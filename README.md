@@ -4,6 +4,8 @@
 
 A bilingual English/Spanish portfolio of selected writing, translation, and longer literary projects.
 
+Content and code are licensed separately. See [CONTENT-LICENSE.md](CONTENT-LICENSE.md) for the policy covering translations and original writing; `LICENSE` applies only to the website software.
+
 **Live portfolio:** https://andaranda.github.io/senda/  
 **Blogger archive:** https://senda-de-palabras.blogspot.com/
 
@@ -26,6 +28,8 @@ The portfolio is intentionally selective rather than a complete archive. Work st
 - `work.html` — individual work pages.
 - `images/` — local images used by the site, including book covers when added.
 - `README.md` — project notes and publishing instructions.
+- `LICENSE` — MIT license for the website's original HTML, CSS, and JavaScript only.
+- `CONTENT-LICENSE.md` — separate licensing policy for translations, original writing, and third-party material.
 
 Homepage copy, card descriptions, project statuses, and the mini-sutra selection are currently maintained directly in the HTML/JavaScript. Blog-based text is retrieved at runtime from Blogger, so those dialogs need an internet connection and the public Blogger feed to remain available. If the feed cannot be reached, the site shows a fallback message and links visitors to the blog.
 
